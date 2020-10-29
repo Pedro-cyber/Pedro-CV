@@ -1,0 +1,68 @@
+@media screen and (min-width: 1024px) {
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  body {
+    margin-left: emconversor(220px);
+    margin-right: emconversor(220px);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: $gris;
+    margin-top: emconversor(22px);
+    margin-bottom: emconversor(22px);
+    border-radius: emconversor(22px);
+  }
+
+  .parte2 {
+    display: block;
+
+    &__bloque {
+      display: flex;
+    }
+
+    &__cursos {
+      flex: 1;
+    }
+
+    &__titulaciones {
+      flex: 1;
+    }
+
+    &__masters {
+      flex: 1;
+    }
+
+    &__educacion--transition:hover h3,
+    &__experiencia--transition:hover h3,
+    &__idiomas--transition:hover h3 {
+      animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    }
+  }
+
+  .parte1 {
+    &__sobremi--transition:hover h3,
+    &__habilidades--transition:hover h3 {
+      animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    }
+  }
+}

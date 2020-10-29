@@ -1,0 +1,12 @@
+@media screen and (min-width: 700px) {
+  img {
+    width: emconversor(120px);
+    display: block;
+  }
+
+  .parte1,
+  .parte2 {
+    display: flex;
+    margin: auto;
+  }
+}
